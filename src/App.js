@@ -1,4 +1,5 @@
 import "./App.css";
+import Grid from "./components/grid/Grid";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header">
         <p>Welcome to Keno game!</p>
       </header>
+      <Grid></Grid>
     </div>
   );
 }
