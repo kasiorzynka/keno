@@ -20,11 +20,6 @@
   margin-top: 10px;
   .grid-tbody {
     cursor: pointer;
-    /* .grid-td {
-      .active {
-        background-color: "#e1e1e1" !important;
-      } 
-    }*/
   }
 }
 

@@ -26,12 +26,8 @@ const Keno = () => {
       changeOneGridElementColor(number, "#fff");
       // Adding new numbers if there is chosen less than 5
     } else if (numbers.length < 5) {
-      console.log(`Klik ${number}`);
       setNumbers((oldArray) => [...oldArray, number]);
       changeOneGridElementColor(number, "#e1e1e1");
-      // document
-      //   .getElementById(`number-${number.toString()}`)
-      //   .classList.add("active");
     } else {
       alert("Max 5 numbers!");
     }
@@ -45,7 +41,6 @@ const Keno = () => {
     for (let i = 0; i < 5; i++) {
       const randomNumber = Math.floor(Math.random() * (80 - 1 + 1)) + 1;
       changeOneGridElementColor(randomNumber, "#e1e1e1");
-      //.classList.add("active");
       setNumbers((oldArray) => [...oldArray, randomNumber]);
     }
   };
@@ -56,7 +51,6 @@ const Keno = () => {
     stakeButtons.forEach((button) => {
       button.classList.remove("active");
     });
-    console.log(e.target.value);
     e.target.classList.add("active");
     setStake(e.target.value);
   };
@@ -90,7 +84,6 @@ const Keno = () => {
             key={number.toString()}
             value={number}
             onClick={() => handleNumberClick(currentNumber)}
-            // style={{ this.classList.contains("active") ? backgroundColor: "#e1e1e1" }}
           >
             {number}
           </td>
