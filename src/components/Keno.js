@@ -124,38 +124,34 @@ const Keno = () => {
         </Button>
       </div>
       <div className="stake-buttons">
-        <Button
-          variant="light"
-          value="50"
-          onClick={(e) => handleStakeClick(e, "value")}
-        >
+        <Button variant="light" value="50" onClick={(e) => handleStakeClick(e)}>
           $50
         </Button>
         <Button
           variant="light"
           value="100"
-          onClick={(e) => handleStakeClick(e, "value")}
+          onClick={(e) => handleStakeClick(e)}
         >
           $100
         </Button>
         <Button
           variant="light"
           value="200"
-          onClick={(e) => handleStakeClick(e, "value")}
+          onClick={(e) => handleStakeClick(e)}
         >
           $200
         </Button>
         <Button
           variant="light"
           value="500"
-          onClick={(e) => handleStakeClick(e, "value")}
+          onClick={(e) => handleStakeClick(e)}
         >
           $500
         </Button>
         <Button
           variant="light"
           value="1000"
-          onClick={(e) => handleStakeClick(e, "value")}
+          onClick={(e) => handleStakeClick(e)}
         >
           $1000
         </Button>
@@ -165,7 +161,7 @@ const Keno = () => {
           placeholder="0"
           min="0"
           value={stake}
-          onChange={(e) => handleStakeClick(e, "value")}
+          onChange={(e) => handleStakeClick(e)}
         />
         $
       </div>
