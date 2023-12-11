@@ -19,6 +19,11 @@ const Keno = () => {
       number.style.backgroundColor = "#fff";
     });
 
+  const clearStakeInput = () =>
+    document.querySelectorAll(".stake-buttons .btn").forEach((button) => {
+      button.classList.remove("active");
+    });
+
   const handleNumberClick = (number) => {
     // Removing numbers clicked again
     if (numbers.includes(number)) {
@@ -47,10 +52,7 @@ const Keno = () => {
 
   const handleStakeClick = (e) => {
     // Handles buttons with the most popular stakes
-    const stakeButtons = document.querySelectorAll(".stake-buttons .btn");
-    stakeButtons.forEach((button) => {
-      button.classList.remove("active");
-    });
+    clearStakeInput();
     e.target.classList.add("active");
     setStake(e.target.value);
   };
@@ -64,6 +66,7 @@ const Keno = () => {
         `Please choose 5 numbers or click Lucky pick button, choose a stake and then click Place bet button.`
       );
     }
+    clearStakeInput();
     setStake(0);
     setNumbers([]);
     clearFullGridLayout();
