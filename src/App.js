@@ -1,13 +1,13 @@
 import "./App.css";
-import Grid from "./components/grid/Grid";
+import Keno from "./components/Keno";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>Welcome to Keno game!</p>
+      <header className="app-header">
+        <p>Welcome to our games!</p>
       </header>
-      <Grid></Grid>
+      <Keno></Keno>
     </div>
   );
 }
